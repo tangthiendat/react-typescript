@@ -1,4 +1,9 @@
-export default function CourseGoal({ title, description }: { title: string; description: string }) {
+type CourseGoalProps = {
+  title: string;
+  description: string;
+};
+
+const CourseGoal: React.FC<CourseGoalProps> = ({ title, description }) => {
   return (
     <article>
       <div>
@@ -8,4 +13,6 @@ export default function CourseGoal({ title, description }: { title: string; desc
       <button>Delete</button>
     </article>
   );
-}
+};
+
+export default CourseGoal;
