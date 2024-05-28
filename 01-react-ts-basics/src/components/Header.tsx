@@ -1,11 +1,10 @@
-import { PropsWithChildren } from "react";
-
-type HeaderProps = PropsWithChildren<{
+interface HeaderProps {
   image: {
     src: string;
     alt: string;
   };
-}>;
+  children?: React.ReactNode;
+}
 
 const Header: React.FC<HeaderProps> = ({ image, children }) => {
   return (
