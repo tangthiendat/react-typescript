@@ -8,18 +8,20 @@
 // }>;
 
 interface CourseGoalProps {
+  id: number;
   title: string;
   children?: React.ReactNode;
+  onDelete: (id: number) => void;
 }
 
-const CourseGoal: React.FC<CourseGoalProps> = ({ title, children }) => {
+const CourseGoal: React.FC<CourseGoalProps> = ({ title, id, children, onDelete }) => {
   return (
     <article>
       <div>
         <h2>{title}</h2>
         {children}
       </div>
-      <button>Delete</button>
+      <button onClick={() => onDelete(id)}>Delete</button>
     </article>
   );
 };
