@@ -1,4 +1,4 @@
-import { type ReactNode, createContext } from "react";
+import { type ReactNode, createContext, useContext } from "react";
 
 interface Timer {
   name: string;
@@ -34,4 +34,12 @@ const TimersContextProvider: React.FC<TimersContextProviderProps> = ({ children 
   return <TimersContext.Provider value={contextValue}>{children}</TimersContext.Provider>;
 };
 
-export default TimersContextProvider;
+function useTimersContext() {
+  const context = useContext(TimersContext);
+  if (!context) {
+    throw new Error("useTimers must be used within a TimersContextProvider");
+  }
+  return context;
+}
+
+export { TimersContextProvider, useTimersContext };
