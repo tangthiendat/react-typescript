@@ -1,14 +1,10 @@
 import Button from "./components/Button";
+import Container from "./components/Container";
 
 function App() {
   return (
     <main>
-      <p>
-        <Button>A Button</Button>
-      </p>
-      <p>
-        <Button href="https://google.com">An Anchor</Button>
-      </p>
+      <Container as={Button}>Click me</Container>
     </main>
   );
 }
