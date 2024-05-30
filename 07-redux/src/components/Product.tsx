@@ -1,3 +1,6 @@
+import { addToCart } from "../store/cart-slice.ts";
+import { useCartDispatch } from "../store/hook.ts";
+
 interface ProductProps {
   id: string;
   image: string;
@@ -6,8 +9,12 @@ interface ProductProps {
   description: string;
 }
 
-const Product: React.FC<ProductProps> = ({ image, title, price, description }) => {
-  function handleAddToCart() {}
+const Product: React.FC<ProductProps> = ({ id, image, title, price, description }) => {
+  const dispatch = useCartDispatch();
+
+  function handleAddToCart() {
+    dispatch(addToCart({ id, title, price }));
+  }
 
   return (
     <article className="product">
