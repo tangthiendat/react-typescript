@@ -1,3 +1,4 @@
+import SessionsList from "../components/Sessions/SessionsList.tsx";
 import { SESSIONS } from "../dummy-sessions.ts"; // normally, we would probably load that from a server
 
 const Sessions: React.FC = ({}) => {
@@ -10,7 +11,7 @@ const Sessions: React.FC = ({}) => {
           mechanics - we got just the right session for you!
         </p>
       </header>
-      {/* Todo: Output list of sessions */}
+      <SessionsList sessions={SESSIONS} />
     </main>
   );
 };
