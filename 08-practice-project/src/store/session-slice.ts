@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-interface Session {
+export interface Session {
   id: string;
   title: string;
   summary: string;
