@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
+import MainHeader from "../components/Navigation/MainHeader";
 
 const Root: React.FC = () => {
   return (
     <>
-      {/* Todo: Add Header */}
+      <MainHeader />
       <Outlet />
     </>
   );
