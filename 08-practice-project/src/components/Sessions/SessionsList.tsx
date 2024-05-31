@@ -1,6 +1,6 @@
 import SessionItem from "./SessionItem";
 
-export interface Session {
+export interface ISessionItem {
   id: string;
   title: string;
   summary: string;
@@ -8,7 +8,7 @@ export interface Session {
 }
 
 interface SessionsListProps {
-  sessions: Session[];
+  sessions: ISessionItem[];
 }
 
 const SessionsList: React.FC<SessionsListProps> = ({ sessions }) => {

@@ -1,5 +1,5 @@
 import Button from "../UI/Button";
-import { Session as SessionItemProps } from "./SessionsList";
+import { ISessionItem as SessionItemProps } from "./SessionsList";
 
 const SessionItem: React.FC<SessionItemProps> = ({ id, title, summary, image }) => {
   return (
