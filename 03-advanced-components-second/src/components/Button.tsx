@@ -14,10 +14,18 @@ function isAnchorProps(props: ButtonProps | AnchorProps): props is AnchorProps {
 
 const Button: React.FC<ButtonProps | AnchorProps> = (props) => {
   if (isAnchorProps(props)) {
-    return <a className="button" {...props}></a>;
+    return (
+      <a className="button" {...props}>
+        {props.children}
+      </a>
+    );
   }
 
-  return <button className="button" {...props}></button>;
+  return (
+    <button className="button" {...props}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;
