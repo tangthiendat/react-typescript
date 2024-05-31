@@ -1,4 +1,4 @@
-import { type ComponentPropsWithoutRef, type ReactNode } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 import { Link, type LinkProps } from "react-router-dom";
 
 interface BaseProps {
